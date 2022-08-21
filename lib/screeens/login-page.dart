@@ -49,12 +49,12 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        const BackgroundImage(),
-        Scaffold(
-          backgroundColor: Colors.transparent,
-          body: SafeArea(
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Stack(
+        children: [
+          const BackgroundImage(),
+          SafeArea(
             child: SingleChildScrollView(
               child: Padding(
                 padding:
@@ -194,8 +194,8 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
