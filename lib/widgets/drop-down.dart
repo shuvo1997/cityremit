@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import '../mydrop-down-class.dart';
 
 class MyDropDownButton extends StatefulWidget {
-  Color? backgroundColor;
-  MyDropDownButton({Key? key, required this.backgroundColor}) : super(key: key);
+  const MyDropDownButton({Key? key}) : super(key: key);
 
   @override
   State<MyDropDownButton> createState() => _MyDropDownButtonState();
@@ -20,9 +19,7 @@ class _MyDropDownButtonState extends State<MyDropDownButton> {
 
   MyDropDownItem? _dropDownValue;
   List<MyDropDownItem>? myDropDownItemList;
-  MyDropDownButton get widget => super.widget;
-  Color textBackgroundColor = Colors.white;
-  bool isBlack = false;
+
   @override
   void initState() {
     super.initState();

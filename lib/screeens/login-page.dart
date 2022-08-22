@@ -19,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
 
   bool _isObsecure = true;
 
-  Shader linearGradient = LinearGradient(
+  Shader linearGradient = const LinearGradient(
     colors: <Color>[Colors.blue, Colors.pinkAccent],
   ).createShader(const Rect.fromLTRB(100.0, 50.0, 10.0, 50.0));
 
@@ -86,12 +86,10 @@ class _LoginPageState extends State<LoginPage> {
                               color: Colors.redAccent,
                               borderRadius: BorderRadius.circular(50)),
                           child: TextFormField(
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                                 prefixIcon: Padding(
                                   padding: EdgeInsets.only(right: 10.0),
-                                  child: MyDropDownButton(
-                                    backgroundColor: Colors.pinkAccent,
-                                  ),
+                                  child: MyDropDownButton(),
                                 ),
                                 contentPadding: EdgeInsets.symmetric(
                                     horizontal: 20, vertical: 15),
