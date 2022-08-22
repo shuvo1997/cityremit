@@ -4,7 +4,6 @@ import 'package:cityremit/widgets/cityremit-logo.dart';
 import 'package:cityremit/widgets/drop-down.dart';
 import 'package:cityremit/widgets/footer-icon.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -21,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
   bool _isObsecure = true;
 
   final Shader linearGradient = const LinearGradient(
-    colors: <Color>[Colors.red, Colors.lightBlueAccent],
+    colors: <Color>[Colors.blue, Colors.pinkAccent],
   ).createShader(const Rect.fromLTRB(100.0, 50.0, 10.0, 50.0));
 
   Icon _obsecureIcon = const Icon(
@@ -78,13 +77,20 @@ class _LoginPageState extends State<LoginPage> {
                           decoration: BoxDecoration(
                               boxShadow: const [myBoxShadow],
                               gradient: const LinearGradient(
-                                colors: [Colors.red, Colors.lightBlueAccent],
+                                colors: [
+                                  Colors.pinkAccent,
+                                  Colors.pink,
+                                  Colors.blue
+                                ],
                               ),
                               color: Colors.redAccent,
                               borderRadius: BorderRadius.circular(50)),
                           child: TextFormField(
                             decoration: const InputDecoration(
-                                prefixIcon: MyDropDownButton(),
+                                prefixIcon: Padding(
+                                  padding: EdgeInsets.only(right: 10.0),
+                                  child: MyDropDownButton(),
+                                ),
                                 contentPadding: EdgeInsets.symmetric(
                                     horizontal: 20, vertical: 15),
                                 border: InputBorder.none,
@@ -99,7 +105,11 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: BoxDecoration(
                             boxShadow: const [myBoxShadow],
                             gradient: const LinearGradient(
-                              colors: [Colors.red, Colors.lightBlueAccent],
+                              colors: [
+                                Colors.pinkAccent,
+                                Colors.pink,
+                                Colors.blue
+                              ],
                             ),
                             color: Colors.redAccent,
                             borderRadius: BorderRadius.circular(50)),
@@ -150,7 +160,11 @@ class _LoginPageState extends State<LoginPage> {
                       decoration: BoxDecoration(
                           boxShadow: const [myBoxShadow],
                           gradient: const LinearGradient(
-                            colors: [Colors.red, Colors.lightBlueAccent],
+                            colors: [
+                              Colors.pinkAccent,
+                              Colors.pink,
+                              Colors.blue
+                            ],
                           ),
                           borderRadius: BorderRadius.circular(50)),
                       child: TextButton(

@@ -69,14 +69,15 @@ class _MyDropDownButtonState extends State<MyDropDownButton> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Image.asset(
-                        value.itemImage,
-                        height: 20,
-                        width: 20,
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage(value.itemImage),
                       ),
                     ),
-                    Text(
-                      value.itemCode,
+                    Padding(
+                      padding: const EdgeInsets.only(right: 15.0),
+                      child: Text(
+                        value.itemCode,
+                      ),
                     ),
                   ],
                 )))

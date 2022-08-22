@@ -14,7 +14,11 @@ class CityRemitLogo extends StatelessWidget {
           height: 100,
           width: 240,
           alignment: Alignment.topLeft,
-          child: SvgPicture.asset('${imagePath}cbl_main_logo.svg')),
+          child: SvgPicture.asset(
+            '${imagePath}cbl_main_logo.svg',
+            height: 100,
+            width: 200,
+          )),
     );
   }
 }
