@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CityRemitLogo extends StatelessWidget {
@@ -9,15 +10,13 @@ class CityRemitLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 30),
+      padding: EdgeInsets.symmetric(vertical: 10.h),
       child: Container(
-          height: 100,
-          width: 240,
           alignment: Alignment.topLeft,
           child: SvgPicture.asset(
             '${imagePath}cbl_main_logo.svg',
-            height: 100,
-            width: 200,
+            height: 80.h,
+            width: 180.w,
           )),
     );
   }

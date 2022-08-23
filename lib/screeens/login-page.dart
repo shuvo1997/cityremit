@@ -4,6 +4,7 @@ import 'package:cityremit/widgets/cityremit-logo.dart';
 import 'package:cityremit/widgets/drop-down.dart';
 import 'package:cityremit/widgets/footer-icon.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -56,8 +57,7 @@ class _LoginPageState extends State<LoginPage> {
           SafeArea(
             child: SingleChildScrollView(
               child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -65,14 +65,14 @@ class _LoginPageState extends State<LoginPage> {
                     Text(
                       'Login',
                       style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 30.sp,
                           fontWeight: FontWeight.bold,
                           foreground: Paint()..shader = linearGradient),
                     ),
-                    const Text('Enter Info for login',
-                        style: TextStyle(fontSize: 20)),
+                    Text('Enter Info for login',
+                        style: TextStyle(fontSize: 20.sp)),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      padding: EdgeInsets.symmetric(vertical: 20.h),
                       child: Container(
                           decoration: BoxDecoration(
                               boxShadow: const [myBoxShadow],
@@ -84,18 +84,19 @@ class _LoginPageState extends State<LoginPage> {
                                 ],
                               ),
                               color: Colors.redAccent,
-                              borderRadius: BorderRadius.circular(50)),
+                              borderRadius: BorderRadius.circular(30.r)),
                           child: TextFormField(
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                                 prefixIcon: Padding(
-                                  padding: EdgeInsets.only(right: 10.0),
-                                  child: MyDropDownButton(),
+                                  padding: EdgeInsets.only(right: 10.0.w),
+                                  child: const MyDropDownButton(),
                                 ),
                                 contentPadding: EdgeInsets.symmetric(
-                                    horizontal: 20, vertical: 15),
+                                    horizontal: 20.w, vertical: 15.h),
                                 border: InputBorder.none,
                                 hintText: 'Mobile Number',
-                                hintStyle: TextStyle(color: Colors.white)),
+                                hintStyle: TextStyle(
+                                    fontSize: 15.sp, color: Colors.white)),
                             style: const TextStyle(color: Colors.white),
                             keyboardType: TextInputType.number,
                             textInputAction: TextInputAction.next,
@@ -112,21 +113,22 @@ class _LoginPageState extends State<LoginPage> {
                               ],
                             ),
                             color: Colors.redAccent,
-                            borderRadius: BorderRadius.circular(50)),
+                            borderRadius: BorderRadius.circular(30.r)),
                         child: TextFormField(
                           decoration: InputDecoration(
-                              contentPadding: const EdgeInsets.symmetric(
-                                  horizontal: 20.0, vertical: 15),
+                              contentPadding: EdgeInsets.symmetric(
+                                  horizontal: 20.0.w, vertical: 15.h),
                               border: InputBorder.none,
                               hintText: 'Password',
                               suffixIcon: Padding(
                                   padding:
-                                      const EdgeInsets.symmetric(vertical: 0),
+                                      EdgeInsets.symmetric(horizontal: 10.w),
                                   child: IconButton(
                                     onPressed: _makeObsecure,
                                     icon: _obsecureIcon,
                                   )),
-                              hintStyle: const TextStyle(color: Colors.white)),
+                              hintStyle: TextStyle(
+                                  fontSize: 15.sp, color: Colors.white)),
                           obscureText: _isObsecure,
                           style: const TextStyle(color: Colors.white),
                           textInputAction: TextInputAction.done,
@@ -143,13 +145,13 @@ class _LoginPageState extends State<LoginPage> {
                                     checkedValue = newValue!;
                                   });
                                 }),
-                            const Text(
+                            Text(
                               'Remember me',
                               style: bodyTextStyle,
                             )
                           ],
                         ),
-                        const Text(
+                        Text(
                           'Forgot Password?',
                           style: bodyTextStyle,
                         )
@@ -166,27 +168,27 @@ class _LoginPageState extends State<LoginPage> {
                               Colors.blue
                             ],
                           ),
-                          borderRadius: BorderRadius.circular(50)),
+                          borderRadius: BorderRadius.circular(30.r)),
                       child: TextButton(
                         onPressed: () {},
-                        child: const Text(
+                        child: Text(
                           'Login',
                           style: TextStyle(
-                              fontSize: 18,
+                              fontSize: 18.sp,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.symmetric(vertical: 10.0),
+                      padding: EdgeInsets.symmetric(vertical: 10.0.h),
                       alignment: Alignment.center,
-                      height: 80,
-                      width: 80,
+                      height: 65.h,
+                      width: 65.w,
                       child: Image.asset('${image_path}fingerprint.png'),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 100),
+                      padding: EdgeInsets.only(top: 70.h),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [

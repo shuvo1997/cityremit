@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../mydrop-down-class.dart';
 
@@ -67,13 +68,13 @@ class _MyDropDownButtonState extends State<MyDropDownButton> {
             return Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: EdgeInsets.all(10.0.r),
                   child: CircleAvatar(
                     backgroundImage: AssetImage(item.itemImage),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 15.0),
+                  padding: EdgeInsets.only(right: 12.0.w),
                   child: Text(
                     item.itemCode,
                     style: const TextStyle(color: Colors.white),
@@ -89,13 +90,13 @@ class _MyDropDownButtonState extends State<MyDropDownButton> {
                 child: Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0.r),
                       child: CircleAvatar(
                         backgroundImage: AssetImage(value.itemImage),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right: 15.0),
+                      padding: EdgeInsets.only(right: 15.0.w),
                       child: Text(
                         value.itemCode,
                         style: const TextStyle(color: Colors.black),
